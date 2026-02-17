@@ -25,7 +25,7 @@ NovaFabric-Validation-Check/
 ├─ LICENSE
 ├─ requirements.txt
 ├─ citations.txt
-├
+|
 |─ assets/
 │  ├─ NovaFabric.png
 │  ├─ NovaWirelessAIOperations.png
