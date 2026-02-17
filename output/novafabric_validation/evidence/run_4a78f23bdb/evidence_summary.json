@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-02-16T19:51:59",
+  "run_id": "4a78f23bdb",
+  "input_csv": "output\\novafabric_validation\\NovaFabric_instrumented.csv",
+  "input_sha256": "bfd02a87d55f8e79610ff8748c1ddbd9a45a040851385d58bf6eef081e06a91b",
+  "receipt_copied": "output\\novafabric_validation\\evidence\\run_4a78f23bdb\\copied_instrumentation_receipt.json",
+  "columns_used": {
+    "friction": "friction_level_filled",
+    "ticket": "ticket_flag_filled",
+    "resolved": "resolved_flag_filled",
+    "repeat7": "repeat_7d_flag_filled",
+    "subreason": "subreason_std",
+    "rep": "rep_id"
+  },
+  "lift_monotonicity": {
+    "ticket_increasing_score": 1.0,
+    "repeat7_increasing_score": 1.0,
+    "resolved_decreasing_score": 1.0
+  },
+  "models": {
+    "ticket": {
+      "uncontrolled": {
+        "n": 20000,
+        "features": 1
+      },
+      "controls": {
+        "n": 20000,
+        "features": 229
+      }
+    },
+    "resolved": {
+      "uncontrolled": {
+        "n": 20000,
+        "features": 1
+      },
+      "controls": {
+        "n": 20000,
+        "features": 229
+      }
+    }
+  },
+  "outputs": {
+    "run_dir": "output\\novafabric_validation\\evidence\\run_4a78f23bdb",
+    "decile_lift_table": "output\\novafabric_validation\\evidence\\run_4a78f23bdb\\decile_lift_table.csv",
+    "neg_control_results": "output\\novafabric_validation\\evidence\\run_4a78f23bdb\\negative_control_results.csv"
+  },
+  "notes": [
+    "Logistic ORs are per 1 SD increase in friction (friction_z).",
+    "Negative control should have OR ~ 1.0 with CI spanning 1.0; if not, revisit modeling leakage.",
+    "Rep_id was collapsed: reps with < rep_min_calls -> REP_OTHER to control dimensionality."
+  ],
+  "config": {
+    "input_csv": "output/novafabric_validation/NovaFabric_instrumented.csv",
+    "out_dir": "output/novafabric_validation/evidence",
+    "include_subreason": true,
+    "include_rep": true,
+    "rep_min_calls": 50,
+    "n_deciles": 10,
+    "max_iter": 2000,
+    "C": 1.0,
+    "bootstrap_n": 300,
+    "random_seed": 42,
+    "make_lift_plots": true
+  }
+}
