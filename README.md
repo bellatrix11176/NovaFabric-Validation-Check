@@ -25,9 +25,17 @@ NovaFabric-Validation-Check/
 ├─ LICENSE
 ├─ requirements.txt
 ├─ citations.txt
-│
+├
+|─assets/
+│  ├─ NovaFabric.png
+│  ├─ NovaWirelessAIOperations.png
+|  ├─ NovaWirelessLogo.png
+│  └─ NovaWirelessPromoDesign.png
+|
 ├─ data/
-│  └─ NovaFabric.csv
+│  ├─ 00_instrument_novafabric.py
+│  ├─ 01_validate_novafabric.py
+│  └─ 02_friction_lift_and_models.pyv
 │
 ├─ src/
 │  ├─ 00_instrument_novafabric.py
