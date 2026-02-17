@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-02-16T20:01:25",
+  "run_id": "e7d11eb4f5",
+  "friction_col": "friction_level_filled",
+  "outcomes": {
+    "ticket": "ticket_flag_filled",
+    "resolved": "resolved_flag_filled"
+  },
+  "controls_used": [
+    "subreason_std",
+    "rep_id"
+  ],
+  "models": {
+    "ticket_uncontrolled": {
+      "n_used": 20000,
+      "status": "OK",
+      "pseudo_r2_mcfadden": 0.24405244941551518,
+      "aic": 19753.280046349573,
+      "bic": 19769.087021454645,
+      "llf": -9874.640023174787,
+      "formula": "ticket_flag_filled ~ friction_z"
+    },
+    "ticket_controls": {
+      "n_used": 20000,
+      "status": "OK",
+      "pseudo_r2_mcfadden": 0.24601729109666737,
+      "aic": 19839.94816680606,
+      "bic": 20401.095783036126,
+      "llf": -9848.97408340303,
+      "formula": "ticket_flag_filled ~ friction_z + C(subreason_std) + C(rep_id)"
+    },
+    "resolved_uncontrolled": {
+      "n_used": 20000,
+      "status": "OK",
+      "pseudo_r2_mcfadden": 0.2096229363829767,
+      "aic": 21151.467466193353,
+      "bic": 21167.274441298425,
+      "llf": -10573.733733096677,
+      "formula": "resolved_flag_filled ~ friction_z"
+    },
+    "resolved_controls": {
+      "n_used": 20000,
+      "status": "OK",
+      "pseudo_r2_mcfadden": 0.2124110914840841,
+      "aic": 21214.86709884269,
+      "bic": 21776.014715072753,
+      "llf": -10536.433549421345,
+      "formula": "resolved_flag_filled ~ friction_z + C(subreason_std) + C(rep_id)"
+    }
+  }
+}

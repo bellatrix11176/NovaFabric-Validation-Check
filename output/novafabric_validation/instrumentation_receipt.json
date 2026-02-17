@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-02-16T19:32:41",
+  "run_id": "8d9cb353de",
+  "script": "C:\\Users\\gigih\\OneDrive\\NovaWireless\\NovaFabric Validation Checklist\\src\\00_instrument_novafabric.py",
+  "repo_root": "C:\\Users\\gigih\\OneDrive\\NovaWireless\\NovaFabric Validation Checklist",
+  "input_csv": "data/NovaFabric.csv",
+  "output_csv": "output\\novafabric_validation\\NovaFabric_instrumented.csv",
+  "rows": 20000,
+  "seed": 42,
+  "friction_summary": {
+    "mean": 0.3536711674011991,
+    "std": 0.0682047535698614,
+    "min": 0.0013346231667558384,
+    "max": 0.8316051226939203
+  },
+  "parameters": {
+    "input_csv": "data/NovaFabric.csv",
+    "out_dir": "output/novafabric_validation",
+    "out_csv": "output/novafabric_validation/NovaFabric_instrumented.csv",
+    "seed": 42,
+    "friction_default": 0.35,
+    "friction_clip": [
+      0.0,
+      1.0
+    ],
+    "friction_noise_sd": 0.04,
+    "ticket_base": -1.55,
+    "ticket_alpha": 1.9,
+    "ticket_beta_unresolved": 0.85,
+    "ticket_noise_sd": 0.35,
+    "resolved_base": -0.45,
+    "resolved_alpha": -1.55,
+    "resolved_beta_ticket": -0.55,
+    "resolved_noise_sd": 0.45,
+    "repeat7_base": -2.25,
+    "repeat7_beta_unresolved": 1.55,
+    "repeat7_alpha_friction": 0.95,
+    "repeat7_beta_ticket": 0.55,
+    "repeat7_noise_sd": 0.5,
+    "repeat30_base": -1.7,
+    "repeat30_beta_unresolved": 1.2,
+    "repeat30_alpha_friction": 0.75,
+    "repeat30_beta_ticket": 0.35,
+    "repeat30_noise_sd": 0.55,
+    "trust_base": 72.0,
+    "trust_friction_weight": 18.0,
+    "trust_ticket_penalty": 4.5,
+    "trust_unresolved_penalty": 7.0,
+    "trust_repeat7_penalty": 5.0,
+    "trust_repeat30_penalty": 3.0,
+    "trust_noise_sd": 3.0,
+    "trust_clip": [
+      0.0,
+      100.0
+    ],
+    "prefer_existing_friction": true
+  },
+  "notes": [
+    "ticket_flag_filled depends positively on friction_z (ticket_alpha)",
+    "resolved_flag_filled depends negatively on friction_z (resolved_alpha) and negatively on ticket_flag_filled",
+    "repeats depend positively on unresolved + friction_z (+ ticket_flag_filled)",
+    "trust_score_filled penalizes friction and failure events"
+  ]
+}
