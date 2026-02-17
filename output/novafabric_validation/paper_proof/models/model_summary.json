@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-02-16T19:40:53",
+  "input_csv": "output/novafabric_validation/NovaFabric_instrumented.csv",
+  "columns_used": {
+    "friction": "friction_level_filled",
+    "ticket": "ticket_flag_filled",
+    "resolved": "resolved_flag_filled",
+    "repeat_7d": "repeat_7d_flag_filled",
+    "subreason": "subreason_std",
+    "rep_id": "rep_id"
+  },
+  "decile_lift": {
+    "path": "output\\novafabric_validation\\paper_proof\\friction_decile_lift.csv",
+    "monotonicity_scores": {
+      "ticket_rate": 1.0,
+      "resolved_rate": 1.0,
+      "repeat_7d_rate": 1.0
+    }
+  },
+  "models": {
+    "logit_ticket": {
+      "ok": true,
+      "n_rows": 20000,
+      "friction_beta": 22.582701868635603,
+      "reported_delta": 0.1,
+      "friction_or_for_delta": 9.566526542488521,
+      "bootstrap_ci": {
+        "ok": true,
+        "n_boot": 300,
+        "or_median": 9.762548833600974,
+        "or_p025": 9.212925970463994,
+        "or_p975": 10.421851332478454
+      },
+      "coef_table_csv": "output\\novafabric_validation\\paper_proof\\models\\logit_ticket_oddsratios.csv"
+    },
+    "logit_resolved": {
+      "ok": true,
+      "n_rows": 20000,
+      "friction_beta": -20.961655663362343,
+      "reported_delta": 0.1,
+      "friction_or_for_delta": 0.12292688068672716,
+      "bootstrap_ci": {
+        "ok": true,
+        "n_boot": 300,
+        "or_median": 0.12209873989864987,
+        "or_p025": 0.11452051844971141,
+        "or_p975": 0.12968590207326328
+      },
+      "coef_table_csv": "output\\novafabric_validation\\paper_proof\\models\\logit_resolved_oddsratios.csv"
+    }
+  }
+}
