@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-02-16T20:01:25",
+  "run_id": "e7d11eb4f5",
+  "status": "PASS",
+  "repo_root": "C:\\Users\\gigih\\OneDrive\\NovaWireless\\NovaFabric Validation Checklist",
+  "input_csv": "output/novafabric_validation/NovaFabric_instrumented.csv",
+  "input_sha256": "bfd02a87d55f8e79610ff8748c1ddbd9a45a040851385d58bf6eef081e06a91b",
+  "rows": 20000,
+  "columns": 32,
+  "columns_used": {
+    "friction": "friction_level_filled",
+    "trust": "trust_score_filled",
+    "ticket": "ticket_flag_filled",
+    "resolved": "resolved_flag_filled",
+    "repeat_7d": "repeat_7d_flag_filled"
+  },
+  "coverage": {
+    "critical_missing_frac": {
+      "friction_level_filled": 0.0,
+      "trust_score_filled": 0.0,
+      "ticket_flag_filled": 0.0,
+      "resolved_flag_filled": 0.0
+    },
+    "missingness_top": {
+      "outcome": 0.75,
+      "friction_level": 0.75,
+      "duration_sec": 0.0,
+      "interaction_id": 0.0,
+      "escalated_flag": 0.0,
+      "resolved_flag": 0.0,
+      "next_steps": 0.0,
+      "ai_memo_text": 0.0,
+      "timestamp": 0.0,
+      "customer_id": 0.0,
+      "rep_id": 0.0,
+      "subreason": 0.0,
+      "aht_sec": 0.0,
+      "aht_min": 0.0,
+      "profanity_count": 0.0
+    }
+  },
+  "rates": {
+    "resolved_rate": 0.39035,
+    "ticket_rate": 0.3595,
+    "repeat7_rate": 0.32705
+  },
+  "correlations": {
+    "corr_friction_trust": -0.6634456428650096,
+    "corr_friction_resolved": -0.46082614865211885,
+    "corr_friction_ticket": 0.49464898845531474,
+    "corr_friction_repeat7": 0.4298024214400602
+  },
+  "correlation_n": {
+    "corr_friction_trust": 20000,
+    "corr_friction_resolved": 20000,
+    "corr_friction_ticket": 20000,
+    "corr_friction_repeat7": 20000
+  },
+  "time_summary": {
+    "days": 138,
+    "min_date": "2025-10-01",
+    "max_date": "2026-02-15"
+  },
+  "warnings": [
+    "High-missingness columns (>= 20.0%): ['outcome', 'friction_level']"
+  ],
+  "outputs": {
+    "validation_report_md": "output\\novafabric_validation\\validation_report.md",
+    "validation_summary_json": "output\\novafabric_validation\\validation_summary.json",
+    "bucket_metrics_csv": "output\\novafabric_validation\\validation_metrics_by_bucket.csv",
+    "rep_metrics_csv": "output\\novafabric_validation\\validation_metrics_by_rep.csv",
+    "decile_lift_table_csv": "output\\novafabric_validation\\decile_lift_table.csv",
+    "logit_ticket_uncontrolled_csv": "output\\novafabric_validation\\logit_ticket_uncontrolled_oddsratios.csv",
+    "logit_ticket_controls_csv": "output\\novafabric_validation\\logit_ticket_controls_oddsratios.csv",
+    "logit_resolved_uncontrolled_csv": "output\\novafabric_validation\\logit_resolved_uncontrolled_oddsratios.csv",
+    "logit_resolved_controls_csv": "output\\novafabric_validation\\logit_resolved_controls_oddsratios.csv",
+    "model_summary_json": "output\\novafabric_validation\\model_summary.json",
+    "plots_run_dir": "output\\novafabric_validation\\plots\\run_e7d11eb4f5"
+  }
+}
