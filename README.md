@@ -4,6 +4,11 @@
 
 ---
 
+⚠️ Resource Notice
+This pipeline is designed to be run iteratively on small datasets. Do not run against large datasets in a single pass. Process one month at a time to avoid memory and CPU overload. Adjust chunk sizes based on your available system resources.
+
+---
+
 Dashboards tell you what happened. This pipeline tells you whether you should believe it.
 
 The NovaFabric Validation Checklist is a three-stage evidence pipeline that takes a synthetic call center dataset and produces audit-ready proof about the relationship between customer friction and operational outcomes. Every output is SHA-256 locked, run-stamped, and isolated — so when a reviewer asks "what data did you validate, what transforms did you apply, and could these outputs be stale," the answer is in the receipt chain, not in someone's memory.
